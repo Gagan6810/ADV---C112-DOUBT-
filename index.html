@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    </head>
+    <body>
+        <center>
+        <h1 class="btn btn-warning heading"> EMOTION TO EMOJI APP 
+            <br>
+            <span> &#9996; </span>
+            <span> &#128400; </span>
+            <span> &#128077; </span>
+            <span> &#128076; </span>
+        </h1>
+        <br>
+        <br>
+        <h3> Take a Selfie of a Guesture to know about its meaning</h3>
+        <br>
+        <h4> On the following Guestures the model is trained </h4>
+        <br>
+        <span> &#9996; </span>
+            <span> &#128400; </span>
+            <span> &#128077; </span>
+            <span> &#128076; </span>
+            <br>
+            <div class="col-md-4"> 
+
+                <label class="btn btn-primary"> Webcam view - </label>
+                <br>
+                <div id="camera" style="border: 2px ridge;">
+                </div>
+                <br>
+                <button class="btn btn-danger" onclick="take_snapshot()"> Capture Image </button>
+            </div>
+            
+            <div id="guestures_result" class="col-md-4"> 
+                <h4 class="btn btn-primary">  Prediction - </h4>
+                <p id="guesture_text" class="guesture_text"> </p>
+                <br>
+                <br>
+                <br>
+                <p id="guesture_predict">  </p>
+            </div>
+    
+            <div class="col-md-4"> 
+    
+                <label class="btn btn-primary"> Taken Snapshot - </label>
+                <br>
+                <div id="snapshot_div">
+                </div>
+                <br>
+                <button class="btn btn-danger" onclick="predict_guesture()"> Predict Image </button>
+    
+            </div>
+        </center>
+        <script src="main.js" async defer></script>
+    </body>
+</html>
